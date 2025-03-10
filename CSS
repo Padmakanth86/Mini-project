@@ -1,0 +1,689 @@
+INDEX:
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c0bdeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0d110d;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.signup-text {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #cc2126;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+WELCOME:
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f8f3f3;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fd0a0a;
+    color: #fff;
+}
+
+.hotel-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #070707;
+}
+
+/* Welcome Container */
+.menu-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c2e8f7;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #f81313;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+section h3 {
+    font-size: 24px;
+    color: #2a16e3;
+    margin-bottom: 15px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h4 {
+    font-size: 20px;
+    color: #555;
+    margin: 0;
+}
+
+.menu-item p {
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ec0f0f;
+}
+
+/* Cart Section */
+.cart-container {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cart-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+/* Buy Button */
+.buy-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background-color: #e71d1d;
+}
+
+/* Total Price Styling */
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+/* Welcome Container */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Subtracting navbar height */
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-container h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+MENU:
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f8f3f3;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fd0a0a;
+    color: #fff;
+}
+
+.hotel-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #070707;
+}
+
+/* Welcome Container */
+.menu-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c2e8f7;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #f81313;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+section h3 {
+    font-size: 24px;
+    color: #2a16e3;
+    margin-bottom: 15px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h4 {
+    font-size: 20px;
+    color: #555;
+    margin: 0;
+}
+
+.menu-item p {
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ec0f0f;
+}
+
+/* Cart Section */
+.cart-container {
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cart-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+/* Buy Button */
+.buy-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background-color: #e71d1d;
+}
+
+/* Total Price Styling */
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+/* Welcome Container */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Subtracting navbar height */
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-container h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+RESERVATION:
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fd0a0a;
+    color: #fff;
+}
+
+.hotel-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #070707;
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.tables {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.table {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            position: relative;
+}
+
+.table.booked {
+            background-color: #f44336;
+            color: white;
+            cursor: not-allowed;
+}
+
+.table .status {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: white;
+ }
+.table:hover:not(.booked) {
+            background-color: #45a049;
+}
+
+#reservation-info {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+}
+
+.form-container {
+            margin-top: 30px;
+            text-align: center;
+}
+
+input, select, textarea, button {
+            width: 250px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+}
+
+button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+}
+
+button:hover {
+            background-color: #45a049;
+}
+
+#confirmation-message {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+}
+
+FEEDBACK:
+.feedback-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feedback-container h1 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.feedback-container p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rating input {
+    display: none; /* Hide radio buttons */
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ccc; /* Default color for unselected stars */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00; /* Highlighted color for selected stars */
+}
+
+.rating input:checked + label,
+.rating input:checked ~ label {
+    color: #ffcc00; /* Ensure selected stars remain highlighted */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fd0a0a;
+    color: #fff;
+}
+
+.hotel-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #070707;
+}
