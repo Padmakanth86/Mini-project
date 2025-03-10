@@ -1,0 +1,197 @@
+INDEX:
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent form from submitting normally
+
+    // Hardcoded credentials for demonstration
+    const validEmail = "sushanth@gmail.com";
+    const validPassword = "password123";
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Check if credentials match
+    if (email === validEmail && password === validPassword) {
+        // Redirect to welcome page if login is successful
+        window.location.href = "welcome.html";
+    } else {
+        // Show error message if login fails
+        errorMessage.textContent = "Incorrect email or password. Please try again.";
+    }
+});
+
+CART:
+document.addEventListener("DOMContentLoaded", function() {
+    const cartItems = [];
+    const cartItemsList = document.getElementById("cart-items");
+    const totalPriceElement = document.getElementById("total-price");
+    const buyButton = document.getElementById("buy-btn");
+
+    // Function to update the cart's total price
+    function updateTotalPrice() {
+        const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+        totalPriceElement.textContent = `Total Price: Rs${totalPrice.toFixed(2)}`;
+    }
+
+    // Function to add a new item to the cart
+    function addToCart(itemName, itemPrice) {
+        const item = { name: itemName, price: parseFloat(itemPrice) };
+        cartItems.push(item);
+
+        // Create and append the new cart item element to the list
+        const listItem = document.createElement("li");
+        listItem.textContent = `${item.name} - Rs${item.price.toFixed(2)}`;
+        cartItemsList.appendChild(listItem);
+
+        // Update the total price
+        updateTotalPrice();
+    }
+
+    // Attach click event to each "Add to Cart" button
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const itemName = button.getAttribute("data-name");
+            const itemPrice = button.getAttribute("data-price");
+            addToCart(itemName, itemPrice);
+        });
+    });
+
+    // Buy Now button functionality
+    buyButton.addEventListener("click", function() {
+        if (cartItems.length === 0) {
+            alert("Your cart is empty! Add items to the cart before buying.");
+        } else {
+            // Redirect to feedback page
+            window.location.href = 'feedback.html';
+        }
+
+   
+    });
+});
+
+RESEVATION:
+let selectedTable = null;
+
+// Function to select a table
+function selectTable(tableId) {
+    const tableElement = document.getElementById(tableId);
+
+    // If the table is already booked, alert the user and return
+    if (tableElement.classList.contains('booked')) {
+        alert("This table is already booked.");
+        return;
+    }
+
+    // Reset the previously selected table to its default color
+    if (selectedTable) {
+        document.getElementById(selectedTable).style.backgroundColor = "#4CAF50";
+    }
+
+    // Change the selected table's color to indicate selection
+    tableElement.style.backgroundColor = "#3e8e41"; // Dark green for selected table
+
+    // Update reservation info section
+    document.getElementById('reservation-info').innerHTML = `
+        <p>You have selected <strong>${tableId}</strong>. Please fill out the form below to complete your booking.</p>
+    `;
+
+    // Show the booking form
+    document.getElementById('booking-form').style.display = 'block';
+
+    // Store the selected table ID
+    selectedTable = tableId;
+}
+
+// Handle form submission
+document.getElementById('reservation-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!selectedTable) {
+        alert("Please select a table first.");
+        return;
+    }
+
+    // Mark the table as booked
+    const tableElement = document.getElementById(selectedTable);
+    tableElement.classList.add('booked');
+    tableElement.innerHTML = `
+        ${selectedTable.charAt(0).toUpperCase() + selectedTable.slice(1)} 
+        <div class="status">Booked</div>
+    `;
+
+    // Hide the form and show confirmation message
+    document.getElementById('booking-form').style.display = 'none';
+    document.getElementById('confirmation-message').innerHTML = `
+        <p>Successfully booked <strong>${selectedTable.charAt(0).toUpperCase() + selectedTable.slice(1)}</strong> for your party at <strong>${document.getElementById('booking-date').value}</strong>.</p>
+        <p>We have registered your name as <strong>${document.getElementById('name').value}</strong> and mobile number as <strong>${document.getElementById('mobile').value}</strong>.</p>
+    `;
+
+    // Reset the form after submission
+    document.getElementById('reservation-form').reset();
+
+    // Open a feedback form in a new tab with a thank you message
+    openThankYouMessage();
+
+    // Optionally, reset the table highlight
+    selectedTable = null;
+});
+
+// Open feedback form in a new tab with a Thank You message
+function openThankYouMessage() {
+    const thankYouWindow = window.open('', '_blank', 'width=600,height=600');
+    thankYouWindow.document.write(`
+        <html>
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    </head>
+        <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1 class="hotel-name">CH Hotel Booking</h1>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="contact">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="about">About</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <div class="feedback-container">
+        <h1>Reservation Successful!</h1>
+        <p>Thank you for your Booking. We value your feedback!</p>
+
+        <!-- Feedback Form -->
+        <form id="feedbackForm">
+            <label for="rating">Rate your experience:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="5 stars">5</label>
+                
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars">4</label>
+                
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars">3</label>
+                
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars">2</label>
+                
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star">1</label>
+            </div>
+
+            <label for="feedback">Additional Comments:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+        </body>
+        </html>
+    `);
+}
