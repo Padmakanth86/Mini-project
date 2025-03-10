@@ -1,0 +1,397 @@
+Welcome page:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Hotel</title>
+    <link rel="stylesheet" href="welcome.css">
+    <script defer src="cart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1 class="hotel-name">CH Hotel Booking</h1>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="contact">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="about">About</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <main class="welcome-container">
+        <h2>Welcome to CH Hotel</h2>
+        <p>We’re great to have you here!</p>
+    </main>
+</body>
+</html>
+
+INDEX HTML:
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+        <p class="signup-text">Don't have an account? <a href="/signup">Sign Up</a></p>
+        <p class="error-message" id="errorMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+MENU HTML:
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Hotel</title>
+    <link rel="stylesheet" href="menu.css">
+    <script defer src="cart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1 class="hotel-name">CH Hotel Booking</h1>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="contact">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="about">About</a>
+            <a href="index.html">Logout</a>
+            
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="menu-container">
+        <h2>CH Hotel Menu</h2>
+
+        <!-- Non-Veg Section -->
+        <section id="non-veg">
+            <h3>Non-Veg items</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <h4>Grilled Chicken</h4>
+                    <p>Marinated chicken grilled to perfection.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="Grilled Chicken" data-price="199">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Lamb Curry</h4>
+                    <p>Slow-cooked lamb in a rich curry sauce.</p>
+                    <p>Price: 299/-</p>
+                    <button class="add-to-cart-btn" data-name="Lamb Curry" data-price="299">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Natu kodi pulusu</h4>
+                    <p>It was very tasty with sangati.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="Natu kodi pulusu" data-price="199">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Chicken Biryani</h4>
+                    <p>Fragrant basmati rice cooked with tender marinated chicken, layered with spices and garnished with fried onions and coriander.            </p>
+                    <p>Price: 239/-</p>
+                    <button class="add-to-cart-btn" data-name="Chicken Biryani" data-price="239">Add to Cart</button>
+                </li><li class="menu-item">
+                    <h4>Mutton Biryani </h4>
+                    <p>Aromatic basmati rice cooked with tender pieces of mutton, seasoned with spices and saffron, garnished with caramelized onions.</p>
+                    <p>Price: 299/-</p>
+                    <button class="add-to-cart-btn" data-name="Mutton Biryani" data-price="299">Add to Cart</button>
+                </li>
+                </li><li class="menu-item">
+                    <h4>Fish Curry</h4>
+                    <p>Fresh fish cooked in a spiced coconut curry, infused with tamarind and curry leaves for a tangy and flavorful taste.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="Fish Curry" data-price="199">Add to Cart</button>
+                </li>
+                </li><li class="menu-item">
+                    <h4>Mutton Seekh Kebab</h4>
+                    <p>Minced mutton mixed with spices, shaped onto skewers, and grilled for a smoky, flavorful taste.</p>
+                    <p>Price: 249/-</p>
+                    <button class="add-to-cart-btn" data-name="Mutton Seekh Kebab" data-price="249">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Veg Section -->
+        <section id="veg items">
+            <h3>Veg items</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <h4>puneer curry</h4>
+                    <p>puneer with taste and spicy.</p>
+                    <p>Price: 299/-</p>
+                    <button class="add-to-cart-btn" data-name="puneer curry" data-price="200/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>pappu</h4>
+                    <p>made with dhal and spicy chillies.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="pappu" data-price="100/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>palak puneer</h4>
+                    <p>puneer with palakura and perfection.</p>
+                    <p>Price: 399/-</p>
+                    <button class="add-to-cart-btn" data-name="palak puneer" data-price="399/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>puneer biryani</h4>
+                    <p>made with love and perfection.</p>
+                    <p>Price: 399/-</p>
+                    <button class="add-to-cart-btn" data-name="puneer biryani" data-price="399/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>brinjal masalaa spicy curry</h4>
+                    <p>mixed with taste and spicy.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="brinjal masalaa spicy curry" data-price="199/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>palakura pappu</h4>
+                    <p>mix of dhal with palakura and perfection.</p>
+                    <p>Price: 249/-</p>
+                    <button class="add-to-cart-btn" data-name="palakura pappu" data-price="249/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>curd rice</h4>
+                    <p>feels like moms food.</p>
+                    <p>Price: 99/-</p>
+                    <button class="add-to-cart-btn" data-name="curd rice" data-price="99/-">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>lady's finger masala</h4>
+                    <p>with maths and intelligence.</p>
+                    <p>Price: 199/-</p>
+                    <button class="add-to-cart-btn" data-name="lady's finger masala" data-price="199/-">Add to Cart</button>
+                </li>
+            </ul>
+              </section>
+
+        <!-- Salads Section -->
+        <section id="salads">
+            <h3>Salads</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <h4>Greek Salad</h4>
+                    <p>Tomatoes, cucumbers, olives, and feta cheese.</p>
+                    <p>Price: 89</p>
+                    <button class="add-to-cart-btn" data-name="Greek Salad" data-price="89">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Caesar Salad</h4>
+                    <p>Romaine lettuce, croutons, parmesan, and Caesar dressing.</p>
+                    <p>Price: 79</p>
+                    <button class="add-to-cart-btn" data-name="Caesar Salad" data-price="79">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Ice Creams Section -->
+        <section id="Ice-creams">
+            <h3>Ice-creams</h3>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <h4>Vanilla</h4>
+                    <p>Classic and creamy,perfect on its own or with toppings.</p>
+                    <p>Price:79/scoop</p>
+                    <button class="add-to-cart-btn" data-name="Vanilla" data-price="79">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Chocolate</h4>
+                    <p>Rich and smooth,made from real cocoa.</p>
+                    <p>Price:99/scoop</p>
+                    <button class="add-to-cart-btn" data-name="Chocolate" data-price="99">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Strawberry</h4>
+                    <p>Sweet and fruity,made with real Strawberry pieces</p>
+                    <p>Price: 69 /scoop</p>
+                    <button class="add-to-cart-btn" data-name="Strawberry" data-price="69">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>pistachio</h4>
+                    <p>Nutty and creamy,made with real pistha nuts</p>
+                    <p>Price: 129 /scoop</p>
+                    <button class="add-to-cart-btn" data-name="pistachio" data-price="129">Add to Cart</button>
+                </li>
+                <li class="menu-item">
+                    <h4>Mango</h4>
+                    <p>Dairy-free and refreshing,brusting with tropical mango flavour</p>
+                    <p>Price: 79 /scoop</p>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="79">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart-container">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items" class="cart-list">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p id="total-price">Total Price: Rs 0.00</p>
+            <button id="buy-btn" class="buy-btn">Buy Now</button> <!-- Buy button -->
+        </section>
+    </main>
+</body>
+</html>
+
+RESERVATION HTML:
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Hotel</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1 class="hotel-name">CH Hotel Booking</h1>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="contact">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="about">About</a>
+            <a href="index.html">Logout</a>
+            
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Restaurant Table Booking</h1>
+        
+        <!-- Table Grid -->
+        <div class="tables" id="tables">
+            <!-- Available Tables -->
+            <div class="table" id="table-1" onclick="selectTable('table-1')">Table 1 <div class="status"></div></div>
+            <div class="table" id="table-2" onclick="selectTable('table-2')">Table 2 <div class="status"></div></div>
+            <div class="table" id="table-3" onclick="selectTable('table-3')">Table 3 <div class="status"></div></div>
+            <div class="table" id="table-4" onclick="selectTable('table-4')">Table 4 <div class="status"></div></div>
+            <div class="table" id="table-5" onclick="selectTable('table-5')">Table 5 <div class="status"></div></div>
+            <div class="table" id="table-6" onclick="selectTable('table-6')">Table 6 <div class="status"></div></div>
+            <div class="table" id="table-7" onclick="selectTable('table-7')">Table 7 <div class="status"></div></div>
+            <div class="table" id="table-8" onclick="selectTable('table-8')">Table 8 <div class="status"></div></div>
+        </div>
+    
+        <!-- Reservation Info -->
+        <div id="reservation-info">
+            <p>Click on an available table to reserve it.</p>
+        </div>
+    
+        <!-- Confirmation Message -->
+        <div id="confirmation-message"></div>
+    
+        <!-- Booking Form -->
+        <div class="form-container" id="booking-form" style="display: none;">
+            <h3>Complete Your Reservation</h3>
+            <form id="reservation-form">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="text" id="mobile" placeholder="Your Mobile Number" required><br>
+                <input type="datetime-local" id="booking-date" required><br>
+                <textarea id="special-requests" placeholder="Special requests (optional)"></textarea><br>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+         </div>
+    </div>
+    <script src="reservation.js"></script>
+</body>
+</html>
+
+FEEDBACK:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <h1 class="hotel-name">CH Hotel Booking</h1>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="contact">Contact</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="about">About</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <div class="feedback-container">
+        <h1>Buy Successful!</h1>
+        <p>Thank you for your purchase. We value your feedback!</p>
+
+        <!-- Feedback Form -->
+        <form id="feedbackForm">
+            <label for="rating">Rate your experience:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="5 stars">5</label>
+                
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars">4</label>
+                
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars">3</label>
+                
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars">2</label>
+                
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star">1</label>
+            </div>
+
+            <label for="feedback">Additional Comments:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            
+            // Get the selected rating
+            const selectedRating = document.querySelector('input[name="rating"]:checked');
+            
+            if (!selectedRating) {
+                alert('Please select a star rating before submitting your feedback.');
+                return;
+            }
+
+            const feedbackText = document.getElementById('feedback').value;
+
+            alert(`Thank you for your feedback!\nRating: ${selectedRating.value} stars\nComment: ${feedbackText}`);
+            
+            // Redirect to home page or any desired page
+            window.location.href = 'welcome.html';
+        });
+    </script>
+</body>
+</html>
